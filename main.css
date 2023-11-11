@@ -102,7 +102,7 @@ a{
     width: auto;
     font-size: 24px;
     padding: 10px 20px;
-    /* border: 2px solid #FFFFFF; */
+    border: 2px solid #FFFFFF;
     transition: 0.3s all;
     color: #FFFFFF;
     background-color: #171820;
