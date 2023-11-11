@@ -159,12 +159,17 @@ a{
 }
 /* stats */
 .stats{
-    background: url('assets/stats_bg_v1.jpeg') no-repeat;
-    background-position: left bottom;
+    background: url('assets/stats_bg_v5.jpeg') no-repeat;
+    background-position: left center;
     background-size: cover;
     min-height: 30vh;
     padding: 80px 0;
     margin: 0 0 80px;
+}
+.statistics_head{
+    font-size: 46px;
+    font-weight: 700;
+    margin: 0 0 50px;
 }
 .stats_cards{
     display: flex;
@@ -179,12 +184,16 @@ a{
     align-items: center;
     justify-content: space-between;
     background-color: #FFFFFF;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: var(--cta-border-radius);
 }
 .stat_number{
     font-size: 44px;
     font-weight: 700;
+}
+.stat_desc{
+    font-size: 18px;
 }
 /* call cta popup */
 .call_cta_popup{
