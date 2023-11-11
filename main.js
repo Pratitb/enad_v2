@@ -1,5 +1,5 @@
 AOS.init({
-    duration: 1500,
+    duration: 1200,
 });
 
 const heroCta = document.querySelector('.hero_cta')

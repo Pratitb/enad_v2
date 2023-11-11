@@ -21,7 +21,7 @@ body{
 a{
     text-decoration: none;
     cursor: pointer;
-    color: #000000;
+    color: var(--main-black);
 }
 .container{
     width: 100%;
@@ -68,10 +68,9 @@ a{
 }
 .call_cta:hover{
     text-decoration: none;
-    color: #000000;
+    color: var(--main-black);
     background-color: transparent;
     border: 2px solid;
-    border-radius: var(--cta-border-radius);
 }
 /* hero section */
 .hero{
@@ -99,19 +98,19 @@ a{
 .hero_cta{
     display: inline-flex;
     justify-content: center;
-    border: 1px solid;
+    /* border: 1px solid; */
     width: auto;
     font-size: 24px;
     padding: 10px 20px;
-    border: 2px solid #FFFFFF;
+    /* border: 2px solid #FFFFFF; */
+    transition: 0.3s all;
     color: #FFFFFF;
-    background-color: #000000;
+    background-color: #171820;
 }
 .hero_cta:hover{
-    border: 2px solid #000000;
+    /* border: 2px solid var(--main-black); */
     background-color: #FFFFFF;
-    transition: 0.3s all;
-    color: #000000;
+    color: var(--main-black);
 }
 /* industries */
 .industries{
