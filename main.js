@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', animateHero)
 heroCta.addEventListener('click', scrollToIndustries)
 callCta.addEventListener('click', showWaitMessage)
 callCtaPopup.addEventListener('click', closeCallCtaPopup)
-navLinks.forEach(navLink => {
+/* navLinks.forEach(navLink => {
     navLink.addEventListener('click', showWaitMessage)
-});
+}); */
 
 function animateHero(){
     heroSection.classList.add('active_hero')

@@ -171,7 +171,7 @@ a{
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: var(--cta-border-radius);
+    border-radius: var(--border-radius);
     background-color: var(--industry-overlay)
 }
 .industry_name{
@@ -264,6 +264,79 @@ a{
     font-size: 44px;
     text-align: center;
     pointer-events: none;
+}
+/* portfolio industries ****************************/
+.page_wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.portfolio_industries{
+    padding: 20px 0;
+    flex-grow: 1;
+}
+.portfolio_industries_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* gap: 40px; */
+}
+.portfolio_industry_card{
+    position: relative;
+    overflow: hidden;
+    flex-basis: 40%;
+    line-height: 0;
+    /* border-radius: var(--border-radius); */
+}
+.portf_landscape_card{
+    border-right: 20px solid var(--main-black);
+    border-bottom: 20px solid var(--main-black);
+    /* border-bottom: 4px; */
+}
+.portf_landscape_card img{
+    border-radius: 10px 0 0 0;
+}
+.portf_architecture_card{
+    border-left: 20px solid var(--main-black);
+    border-bottom: 20px solid var(--main-black);
+    /* border-bottom: 4px; */
+}
+.portf_architecture_card img{
+    border-radius: 0 10px 0 0;
+}
+.portf_interior_card{
+    border-top: 20px solid var(--main-black);
+    border-right: 20px solid var(--main-black);
+    /* border-bottom: 4px; */
+}
+.portf_interior_card img{
+    border-radius: 0 0 0 10px;
+}
+.portf_residential_card{
+    border-top: 20px solid var(--main-black);
+    border-left: 20px solid var(--main-black);
+    /* border-bottom: 4px; */
+}
+.portf_residential_card img{
+    border-radius: 0 0 10px 0;
+}
+.portfolio_industry_image{
+    max-width: 100%;
+    opacity: 0.8;
+    /* flex-basis: 50%; */
+    /* border-radius: var(--border-radius); */
+}
+.portfolio_industry_overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    /* border-radius: var(--border-radius); */
+    background-color: var(--industry-overlay);
+    
 }
 /* footer ****************************/
 footer{
