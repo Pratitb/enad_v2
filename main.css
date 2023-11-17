@@ -218,7 +218,7 @@ a{
     font-size: 46px;
     font-weight: 700;
     margin: 0 0 50px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 .stats_cards{
     display: flex;
@@ -232,10 +232,26 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFFFFF;
+    cursor: pointer;
+    background: linear-gradient(60deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #e6e7eb;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    transition: 0.5s all;
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* border-radius: var(--border-radius); */
+}
+.stat_card:hover{
+    /* color: #FFFFFF; */
+    /* border: 1px solid transparent; */
+    transform: scale(1.1);
     border-radius: var(--border-radius);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    /* animation: gradient_background 5s infinite linear; */
 }
 .stat_number{
     font-size: 44px;
