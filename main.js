@@ -19,9 +19,9 @@ callCtaPopup.addEventListener('click', closeCallCtaPopup)
 }); */
 
 function animateHero(){
-    heroSection.classList.add('active_hero')
+    heroSection.classList.add('activeSection')
     setTimeout(() => {
-        heroCont.classList.add('hero_container_active')
+        heroCont.classList.add('text_active')
     }, 1800);
 }
 function scrollToIndustries(){
