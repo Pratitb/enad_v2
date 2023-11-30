@@ -344,7 +344,7 @@ a{
 }
 /* portfolio landscape ***********************************/
 .portf_landscape_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/home_categories/landscape_v1.jpeg');
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/landscape_v1.jpeg');
     background-position: center;
     background-size: cover;
     border-right: 20px solid var(--main-black);
@@ -356,7 +356,7 @@ a{
 }
 /* portfolio architecture ***********************************/
 .portf_architecture_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/home_categories/architecture_v1.jpeg');
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/architecture_v1.jpeg');
     background-position: center;
     background-size: cover;
     border-left: 20px solid var(--main-black);
@@ -368,7 +368,7 @@ a{
 }
 /* portfolio interior ***********************************/
 .portf_interior_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/home_categories/interiors_v1.jpeg');
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/interiors_v1.jpeg');
     background-position: center;
     background-size: cover;
     border-top: 20px solid var(--main-black);
@@ -380,7 +380,7 @@ a{
 }
 /* portfolio residential ***********************************/
 .portf_residential_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/home_categories/residential_v1.jpeg');
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/residential_v1.jpeg');
     background-position: center;
     background-size: cover;
     border-top: 20px solid var(--main-black);
