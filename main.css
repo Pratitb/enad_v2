@@ -451,9 +451,12 @@ a{
     transition: 2s all;
     background-color: transparent;
 }
-.project_card:hover .project_card_inside{
-    transform: rotateY(180deg);
+.project_card *{
+    pointer-events: none;
 }
+/* .project_card:hover .project_card_inside{
+    transform: rotateY(180deg);
+} */
 .project_card_inside{
     position: relative;
     width: 100%;
@@ -507,6 +510,9 @@ footer{
 }
 .scale_project_cards{
     transform: scale(1);
+}
+.project_card_active{
+    transform: rotateY(180deg);
 }
 
 /* animations */
