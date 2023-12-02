@@ -9,9 +9,11 @@ const industriesSec = document.querySelector('.industries')
 const callCta = document.querySelector('.call_cta')
 const callCtaPopup = document.querySelector('.call_cta_popup')
 const navLinks = document.querySelectorAll('.nav_links')
+const industriesNavLink = document.querySelector('.nav_industries')
 
 document.addEventListener('DOMContentLoaded', animateHero)
 heroCta.addEventListener('click', scrollToIndustries)
+industriesNavLink.addEventListener('click', scrollToIndustries)
 callCta.addEventListener('click', showWaitMessage)
 callCtaPopup.addEventListener('click', closeCallCtaPopup)
 /* navLinks.forEach(navLink => {
