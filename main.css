@@ -449,6 +449,7 @@ a{
     perspective: 2000px;
     transform: scale(0);
     transition: 2s all;
+    cursor: pointer;
     background-color: transparent;
 }
 .project_card *{
