@@ -13,13 +13,14 @@ const navLinks = document.querySelectorAll('.nav_links')
 const headerIndustries = document.querySelector('.nav_industries')
 const categoryName = document.querySelector('.category_name')
 const projectHead = document.querySelector('.project_head')
+const projectsWrap = document.querySelector('.project_cards_wrap')
 const projectCards = document.querySelectorAll('.project_card')
 const projectCardInside = document.querySelectorAll('.project_card_inside')
 
 // eventlisteners
 document.addEventListener('DOMContentLoaded', function(){
-    animateCategoryHeads(projectHead, 3200)
-    animateCategoryHeads(categoryName, 4400)
+    animateCategoryHeads(projectHead, 2500)
+    animateCategoryHeads(categoryName, 3200)
     projectCardScale()
 })
 // heroCta.addEventListener('click', scrollToIndustries)
@@ -57,10 +58,13 @@ function animateCategoryHeads(head, delay){
 }
 function projectCardScale(){
     setTimeout(() => {
+        projectsWrap.style.top = '170px';
+        projectsWrap.style.padding = '0 0 50px';
         projectCards.forEach(projectCard => {
             projectCard.classList.add('scale_project_cards')
         });
-    }, 5000);
+    }, 4000);
+
 }
 /* function flipCard(cardClicked){
     console.log(cardClicked.target);
@@ -74,6 +78,6 @@ function activateProjectCard(cardClicked){
         clickedCardInside.classList.toggle('project_card_active')
         setTimeout(() => {
             clickedCardInside.classList.remove('project_card_active')
-        }, 11000);
+        }, 9000);
 
 }

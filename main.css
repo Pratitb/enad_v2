@@ -11,7 +11,7 @@
     --hero-overlay: rgba(0,0,0,0.4);
     --industry-overlay: rgba(0,0,0,0.35);
     --cta-width: 200px;
-    --category-frame-time: 3s;
+    --category-frame-time: 2s;
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .material-symbols-outlined {
@@ -438,9 +438,12 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* overflow-y: scroll; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     gap: 40px;
-    margin: 150px auto 50px;
+    margin: 0 auto;
 }
 .project_card{
     width: 100%;
@@ -448,6 +451,7 @@ a{
     max-width: 350px;
     perspective: 2000px;
     transform: scale(0);
+    opacity: 0;
     transition: 2s all;
     cursor: pointer;
     background-color: transparent;
@@ -510,6 +514,7 @@ footer{
     opacity: 1;
 }
 .scale_project_cards{
+    opacity: 1;
     transform: scale(1);
 }
 .project_card_active{
