@@ -2,44 +2,59 @@
 //     duration: 1200,
 // });
 
-// variables
-const heroSection = document.querySelector('.hero')
-const heroCont = document.querySelector('.hero_container')
-const heroCta = document.querySelector('.hero_cta')
-const industriesSec = document.querySelector('.industries')
-const callCta = document.querySelector('.call_cta')
-const callCtaPopup = document.querySelector('.call_cta_popup')
+// VARIABLES *****************************************
+// header
 const navLinks = document.querySelectorAll('.nav_links')
 const industriesNavLink = document.querySelector('.nav_industries')
+const keyProjectsNavLink = document.querySelector('.nav_key_projects')
+const headerCallCta = document.querySelector('.call_cta')
+const headerCallCtaPopup = document.querySelector('.call_cta_popup')
 
-// event listeners
+// hero section
+const heroSection = document.querySelector('.hero')
+const heroContent = document.querySelector('.hero_container')
+const heroCta = document.querySelector('.hero_cta')
+
+// industries section
+const industriesSection = document.querySelector('.industries')
+
+// key projects
+const keyProjectsSection = document.querySelector('.key_projects')
+
+// EVENT LISTENERS *****************************************
 document.addEventListener('DOMContentLoaded', animateHero)
-// heroCta.addEventListener('click', scrollToIndustries)
+heroCta.addEventListener('click', scrollToKeyProjects)
+keyProjectsNavLink.addEventListener('click', scrollToKeyProjects)
 industriesNavLink.addEventListener('click', scrollToIndustries)
-callCta.addEventListener('click', showWaitMessage)
-callCtaPopup.addEventListener('click', closeCallCtaPopup)
+headerCallCta.addEventListener('click', showWaitMessage)
+headerCallCtaPopup.addEventListener('click', closeheaderCallCtaPopup)
 
 // hero section animation
 function animateHero(){
     heroSection.classList.add('activeSection')
     setTimeout(() => {
-        heroCont.classList.add('text_active')
+        heroContent.classList.add('text_active')
     }, 1800);
 }
 
-// hero cta scroll
+// header cta scroll
 function scrollToIndustries(){
-    industriesSec.scrollIntoView()
+    industriesSection.scrollIntoView()
+}
+
+// hero cta scroll
+function scrollToKeyProjects(){
+    keyProjectsSection.scrollIntoView()
 }
 
 // wait message on call cta click
 function showWaitMessage(){
-    callCtaPopup.classList.add('active_flex')
+    headerCallCtaPopup.classList.add('active_flex')
 }
 
 // close wait message
-function closeCallCtaPopup(callClick){
+function closeheaderCallCtaPopup(callClick){
     if(!(callClick.target.classList.contains('call_cta_container'))){
-        callCtaPopup.classList.remove('active_flex') 
+        headerCallCtaPopup.classList.remove('active_flex') 
     }
 }

@@ -9,7 +9,7 @@
     --border-radius: 10px;
     --header-height: 90px;
     --hero-overlay: rgba(0,0,0,0.4);
-    --industry-overlay: rgba(0,0,0,0.35);
+    --industry-overlay: rgba(0,0,0,0.3);
     --cta-width: 200px;
     --category-frame-time: 1.3s;
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -48,8 +48,13 @@ a{
     align-items: center;
 }
 .logo_wrap{
-    padding: 10px 0;
+    padding: 10px;
 }
+/* .logo_wrap:hover{
+    border-radius: var(--border-radius);
+    background-color: #232431;
+    color: #FFFFFF;
+} */
 .logo{
     font-size: 30px;
     line-height: 1;
@@ -216,7 +221,7 @@ a{
 
 /* key projects */
 .key_projects{
-    padding: 80px 0;
+    padding: 50px 0;
 }
 .key_projects_head{
     text-decoration: underline;
