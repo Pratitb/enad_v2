@@ -306,6 +306,24 @@ a{
     flex-basis: 50%;
 }
 
+/* clients */
+.clients{
+    padding: 50px 0;
+}
+.client_head{
+    font-size: 50px;
+    margin: 0 0 40px;
+    /* text-decoration: underline;
+    text-decoration-style: dotted; */
+    text-align: center;
+}
+.clients_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 
 /* stats *********************************************/
 /* .stats{
