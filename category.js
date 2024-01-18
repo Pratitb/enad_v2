@@ -19,8 +19,8 @@ const projectCardInside = document.querySelectorAll('.project_card_inside')
 
 // eventlisteners
 document.addEventListener('DOMContentLoaded', function(){
-    animateCategoryHeads(projectHead, 2500)
-    animateCategoryHeads(categoryName, 3200)
+    animateCategoryHeads(projectHead, 2200)
+    animateCategoryHeads(categoryName, 2700)
     projectCardScale()
 })
 // heroCta.addEventListener('click', scrollToIndustries)
@@ -63,7 +63,7 @@ function projectCardScale(){
         projectCards.forEach(projectCard => {
             projectCard.classList.add('scale_project_cards')
         });
-    }, 4000);
+    }, 3200);
 
 }
 /* function flipCard(cardClicked){

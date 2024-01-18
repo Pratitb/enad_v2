@@ -11,7 +11,7 @@
     --hero-overlay: rgba(0,0,0,0.4);
     --industry-overlay: rgba(0,0,0,0.35);
     --cta-width: 200px;
-    --category-frame-time: 2s;
+    --category-frame-time: 1.3s;
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .material-symbols-outlined {
@@ -163,8 +163,10 @@ a{
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    text-align: center;
     max-width: 270px;
-    line-height: 0;
+    max-height: 405px;
+    line-height: 1;
     border-radius: var(--border-radius);
 }
 .industry_card:hover .industry_image, .industry_card:hover .industry_cta_arrow{
@@ -452,7 +454,7 @@ a{
     perspective: 2000px;
     transform: scale(0);
     opacity: 0;
-    transition: 2s all;
+    transition: 1.5s all;
     cursor: pointer;
     background-color: transparent;
 }
@@ -466,7 +468,7 @@ a{
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 1.2s;
+    transition: transform 1s;
     transform-style: preserve-3d;
 }
 .project_image{
