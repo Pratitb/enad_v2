@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'quackey_regular';
+    src: url('/assets/fonts/quackey_regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 :root{
     --main-green: #4CAF50;
     --main-black: #232431;
@@ -14,12 +20,15 @@
     --category-frame-time: 1.3s;
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.material-symbols-outlined {
+/* .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 200,
   'GRAD' 0,
   'opsz' 24
+} */
+.material-symbols-outlined{
+    font-size: 32px;
 }
 html{
     scroll-behavior: smooth;
@@ -27,7 +36,8 @@ html{
 body{
     /* font-family: 'Inter', sans-serif; */
     /* font-family: 'Rubik', sans-serif; */
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'quackey_regular';
 }
 a{
     text-decoration: none;
@@ -288,9 +298,6 @@ a{
     display: flex;
     align-items: center;
     letter-spacing: 0.8px;
-}
-.material-symbols-outlined{
-    font-size: 32px;
 }
 .key_point_desc{
     font-size: 18px;
