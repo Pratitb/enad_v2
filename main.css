@@ -14,7 +14,7 @@
     --main-black: #232431;
     --border-radius: 10px;
     --header-height: 90px;
-    --hero-overlay: rgba(0,0,0,0.4);
+    --hero-overlay: rgba(0,0,0,0.2);
     --industry-overlay: rgba(0,0,0,0.3);
     --cta-width: 200px;
     --category-frame-time: 1.3s;
@@ -122,7 +122,7 @@ a{
     display: flex;
     align-items: center;
     border-radius: var(--border-radius);
-    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('assets/stats_bg_v5.jpeg') no-repeat center;
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('assets/atf_bg.jpeg') no-repeat center;
     background-size: cover;
 }
 .hero_container{
@@ -134,7 +134,7 @@ a{
     text-transform: uppercase;
     text-decoration: underline;
     /* text-decoration-style: double; */
-    color: #FFFFFF;
+    color: var(--main-black);
 }
 .hero_head{
     font-size: 54px;
@@ -142,7 +142,7 @@ a{
     max-width: 600px;
     margin: 10px 0 50px;
     line-height: 1.2;
-    color: #FFFFFF;
+    color: var(--main-black);
 }
 .hero_cta{
     display: inline-flex;
@@ -154,15 +154,16 @@ a{
     height: 55px;
     font-size: 22px;
     /* padding: 10px 20px; */
-    color: #FFFFFF;
-    background-color: #171820;
+    color: #000000;
+    /* background-color: #171820; */
+    border: 1px solid var(--main-black);
     border-radius: var(--border-radius);
     transition: 0.3s all;
 }
 .hero_cta:hover{
     /* border: 2px solid; */
-    background-color: #FFFFFF;
-    color: var(--main-black);
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 
@@ -235,7 +236,8 @@ a{
 }
 .key_projects_head{
     text-decoration: underline;
-    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;
+    /* text-decoration-style: dotted; */
     text-align: center;
     font-size: 50px;
     margin: 0 0 80px;
@@ -253,8 +255,6 @@ a{
     max-width: 800px;
 }
 .key_project_main_image{
-    max-width: 100%;
-    margin: 0 0 10px;
     border-radius: var(--border-radius);
 }
 .mini_photos{
@@ -269,18 +269,25 @@ a{
     border-radius: var(--border-radius);
 }
 .key_project_name{
-    font-size: 32px;
+    font-size: 24px;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 .key_project_time{
     font-size: 14px;
     letter-spacing: 0.6px;
-    margin: 0 0 30px;
+    margin: 5px 0 30px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
 }
 .key_project_desc{
     font-size: 18px;
     margin: 0 0 40px;
-    letter-spacing: 0.8px;
+    letter-spacing: 1.2px;
+    line-height: 1.6;
+
 }
 
 /* v2 project */
@@ -302,6 +309,8 @@ a{
 .key_point_desc{
     font-size: 18px;
     margin: 0 0 0 15px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
 }
 .v2_key_points{
     display: flex;
