@@ -255,6 +255,7 @@ a{
     max-width: 800px;
 }
 .key_project_main_image{
+    max-width: 800px;
     border-radius: var(--border-radius);
 }
 .mini_photos{
