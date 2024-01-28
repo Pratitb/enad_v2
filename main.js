@@ -53,8 +53,8 @@ headerCallCtaPopup.addEventListener('click', closeheaderCallCtaPopup)
 heroCta.addEventListener('click', scrollToKeyProjects)
 
 // FUNCTIONS ***********************************************************
-
-// header cta scroll
+// header
+// cta scroll
 function scrollToIndustries(){
     industriesSection.scrollIntoView()
 }
