@@ -1,48 +1,40 @@
-// AOS.init({
-//     duration: 1200,
-// });
-
-// variables
-const heroSection = document.querySelector('.hero')
-const heroCont = document.querySelector('.hero_container')
-const heroCta = document.querySelector('.hero_cta')
+// VARIABLES ***********************************************************
+// industries
 const industriesSec = document.querySelector('.industries')
+
+// header
 const callCta = document.querySelector('.call_cta')
 const callCtaPopup = document.querySelector('.call_cta_popup')
 const navLinks = document.querySelectorAll('.nav_links')
 const headerIndustries = document.querySelector('.nav_industries')
+
+// category container
 const categoryName = document.querySelector('.category_name')
 const projectHead = document.querySelector('.project_head')
 const projectsWrap = document.querySelector('.project_cards_wrap')
 const projectCards = document.querySelectorAll('.project_card')
 const projectCardInside = document.querySelectorAll('.project_card_inside')
 
-// eventlisteners
+// EVENTLISTENERS ***********************************************************
+// on load
 document.addEventListener('DOMContentLoaded', function(){
     animateCategoryHeads(projectHead, 1500)
     animateCategoryHeads(categoryName, 2000)
     projectCardScale()
 })
-// heroCta.addEventListener('click', scrollToIndustries)
-headerIndustries.addEventListener('click', scrollToIndustries)
+
+// header
 callCta.addEventListener('click', showWaitMessage)
-// callCtaPopup.addEventListener('click', closeCallCtaPopup)
+callCtaPopup.addEventListener('click', closeCallCtaPopup)
+
+// project cards
 projectCards.forEach(projectCard => {
     projectCard.addEventListener('click', function(cardClicked){
         activateProjectCard(cardClicked)
     })
 });
 
-// functions
-/* function animateSection(){
-    heroSection.classList.add('activeSection')
-    setTimeout(() => {
-        heroCont.classList.add('text_active')
-    }, 1800);
-} */
-function scrollToIndustries(){
-    industriesSec.scrollIntoView()
-}
+// FUNCTIONS ***********************************************************
 function showWaitMessage(){
     callCtaPopup.classList.add('active_flex')
 }
@@ -66,12 +58,6 @@ function projectCardScale(){
     }, 2200);
 
 }
-/* function flipCard(cardClicked){
-    console.log(cardClicked.target);
-    projectCards.forEach(projectCard => {
-        projectCard.classList.add('project_card_active')
-    });
-} */
 function activateProjectCard(cardClicked){
     let clickedCard = cardClicked.target
     let clickedCardInside = clickedCard.querySelector('.project_card_inside')

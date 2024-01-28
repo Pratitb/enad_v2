@@ -1,8 +1,4 @@
-// AOS.init({
-//     duration: 1200,
-// });
-
-// VARIABLES *****************************************
+// VARIABLES ***********************************************************
 // header
 const navLinks = document.querySelectorAll('.nav_links')
 const industriesNavLink = document.querySelector('.nav_industries')
@@ -17,18 +13,63 @@ const heroCta = document.querySelector('.hero_cta')
 
 // industries section
 const industriesSection = document.querySelector('.industries')
+const stickyIndustries = document.querySelector('.sticky_industries')
 
 // key projects
 const keyProjectsSection = document.querySelector('.key_projects')
 
-// EVENT LISTENERS *****************************************
+// EVENT LISTENERS ***********************************************************
+// document event
+document.addEventListener('scroll', function(){
+
+    const industries = industriesSection.getBoundingClientRect()
+    // fixed distance from top of page 750px
+    const indusOffTop = industriesSection.offsetTop
+
+    // industries section height
+    let industriesHeight = (industries.height)
+
+    // document scrolled
+    var scrolled = document.scrollingElement.scrollTop;
+    
+    if(scrolled > (indusOffTop + industriesHeight) ){
+        // console.log('industries not in viewport');
+        stickyIndustries.classList.add('show_sticky_industries')
+    }
+    else{
+        // console.log('industries in viewport');
+        stickyIndustries.classList.remove('show_sticky_industries')
+    }
+})
 document.addEventListener('DOMContentLoaded', animateHero)
-heroCta.addEventListener('click', scrollToKeyProjects)
+
+// header
 keyProjectsNavLink.addEventListener('click', scrollToKeyProjects)
 industriesNavLink.addEventListener('click', scrollToIndustries)
 headerCallCta.addEventListener('click', showWaitMessage)
 headerCallCtaPopup.addEventListener('click', closeheaderCallCtaPopup)
 
+// atf
+heroCta.addEventListener('click', scrollToKeyProjects)
+
+// FUNCTIONS ***********************************************************
+
+// header cta scroll
+function scrollToIndustries(){
+    industriesSection.scrollIntoView()
+}
+// wait message on call cta click
+function showWaitMessage(){
+    headerCallCtaPopup.classList.add('active_flex')
+}
+// close wait message
+function closeheaderCallCtaPopup(callClick){
+    if(!(callClick.target.classList.contains('call_cta_container'))){
+        headerCallCtaPopup.classList.remove('active_flex') 
+    }
+}
+
+// atf
 // hero section animation
 function animateHero(){
     heroSection.classList.add('activeSection')
@@ -36,25 +77,7 @@ function animateHero(){
         heroContent.classList.add('text_active')
     }, 1800);
 }
-
-// header cta scroll
-function scrollToIndustries(){
-    industriesSection.scrollIntoView()
-}
-
 // hero cta scroll
 function scrollToKeyProjects(){
     keyProjectsSection.scrollIntoView()
-}
-
-// wait message on call cta click
-function showWaitMessage(){
-    headerCallCtaPopup.classList.add('active_flex')
-}
-
-// close wait message
-function closeheaderCallCtaPopup(callClick){
-    if(!(callClick.target.classList.contains('call_cta_container'))){
-        headerCallCtaPopup.classList.remove('active_flex') 
-    }
 }
