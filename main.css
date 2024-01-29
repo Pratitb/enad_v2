@@ -5,9 +5,12 @@
 }
 @font-face {
     font-family: 'quackey_regular';
-    src: url('assets/fonts/role_model_regular.otf') format('opentype');
+    src: url('assets/fonts/salina_trial_regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+.material-symbols-outlined{
+    font-size: 32px;
 }
 :root{
     --main-green: #4CAF50;
@@ -19,16 +22,6 @@
     --cta-width: 200px;
     --category-frame-time: 1.3s;
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-/* .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 200,
-  'GRAD' 0,
-  'opsz' 24
-} */
-.material-symbols-outlined{
-    font-size: 32px;
 }
 html{
     scroll-behavior: smooth;
@@ -60,11 +53,6 @@ a{
 .logo_wrap{
     padding: 10px;
 }
-/* .logo_wrap:hover{
-    border-radius: var(--border-radius);
-    background-color: #232431;
-    color: #FFFFFF;
-} */
 .logo{
     font-size: 30px;
     line-height: 1;
@@ -72,7 +60,6 @@ a{
 .logo_full{
     font-size: 14px;
 }
-
 
 /* navigation *********************************************/
 .navigation{
@@ -230,7 +217,7 @@ a{
     transition: 0.3s all;
 }
 
-/* sticky industries */
+/* sticky industries *********************************************/
 .sticky_industries{
     position: fixed;
     top: -50px;
@@ -316,7 +303,7 @@ a{
 
 }
 
-/* v2 project */
+/* v2 project *********************************************/
 .v2_project_right{
     display: flex;
     flex-direction: column;
@@ -348,7 +335,7 @@ a{
     flex-basis: 50%;
 }
 
-/* clients */
+/* clients *********************************************/
 .clients{
     padding: 50px 0;
 }
@@ -365,64 +352,6 @@ a{
     justify-content: center;
     gap: 10px;
 }
-
-
-/* stats *********************************************/
-/* .stats{
-    /* background: url('assets/stats_bg_v5.jpeg') no-repeat; */
-    /* background-position: left center; */
-    /* background-size: cover; */
-    /* min-height: 30vh;
-    padding: 80px 0;
-    margin: 0 0 80px;
-}
-.statistics_head{
-    font-size: 46px;
-    font-weight: 700;
-    margin: 0 0 50px;
-    /* text-decoration: underline;
-}
-.stats_cards{
-    display: flex;
-    justify-content: space-between;
-}
-.stat_card{
-    width: 100%;
-    max-width: 260px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    background: linear-gradient(60deg, #FFFFFF, #FFFFFF);
-    border: 1px solid #e6e7eb;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-    transition: 0.5s all;
-    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-    /* border-radius: var(--border-radius);
-}
-.stat_card:hover{
-    /* color: #FFFFFF; */
-    /* border: 1px solid transparent;
-    transform: scale(1.1);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    /* animation: gradient_background 5s infinite linear;
-}
-.stat_number{
-    font-size: 44px;
-    font-weight: 700;
-}
-.stat_desc{
-    font-size: 18px;
-} */
-
 
 /* call cta popup ****************************************/
 .call_cta_popup{
@@ -459,88 +388,6 @@ a{
     pointer-events: none;
 }
 
-
-/* portfolio industries 
-/* .portfolio_page_wrap{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-.portfolio_industries{
-    padding: 20px 0;
-    flex-grow: 1;
-}
-.portfolio_industries_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* gap: 40px;
-}
-.portfolio_industry_card{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 466px;
-    height: 317px;
-    line-height: 0;
-    background-position: center;
-    background-size: cover;
-    /* border-radius: var(--border-radius);
-} */
-
-/* portfolio industry cards
-/* .portf_landscape_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/landscape_v1.jpeg');
-    background-position: center;
-    background-size: cover;
-    border-right: 20px solid var(--main-black);
-    border-bottom: 20px solid var(--main-black);
-    /* border-bottom: 4px;
-}
-.portf_landscape_card img{
-    border-radius: 10px 0 0 0;
-}
-.portf_architecture_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/architecture_v1.jpeg');
-    background-position: center;
-    background-size: cover;
-    border-left: 20px solid var(--main-black);
-    border-bottom: 20px solid var(--main-black);
-    /* border-bottom: 4px;
-}
-.portf_architecture_card img{
-    border-radius: 0 10px 0 0;
-}
-.portf_interior_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/interiors_v1.jpeg');
-    background-position: center;
-    background-size: cover;
-    border-top: 20px solid var(--main-black);
-    border-right: 20px solid var(--main-black);
-    /* border-bottom: 4px;
-}
-.portf_interior_card img{
-    border-radius: 0 0 0 10px;
-}
-.portf_residential_card{
-    background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/home_categories/residential_v1.jpeg');
-    background-position: center;
-    background-size: cover;
-    border-top: 20px solid var(--main-black);
-    border-left: 20px solid var(--main-black);
-    /* border-bottom: 4px;
-}
-.portf_residential_card img{
-    border-radius: 0 0 10px 0;
-}
-.portfolio_industry_image{
-    max-width: 100%;
-    /* flex-basis: 50%;
-    /* border-radius: var(--border-radius);
-} */
-
-
 /* category heads *********************************************/
 .category_head{
     position: fixed;
@@ -559,7 +406,7 @@ a{
     background-color: var(--main-black);
 }
 .category_name_wrap{
-    top: 71px;
+    top: 67px;
     padding: 5px 0;
     animation: right_left var(--category-frame-time) ease-out;
 }
@@ -612,9 +459,6 @@ a{
 .project_card *{
     pointer-events: none;
 }
-/* .project_card:hover .project_card_inside{
-    transform: rotateY(180deg);
-} */
 .project_card_inside{
     position: relative;
     width: 100%;
