@@ -304,13 +304,13 @@ a{
     font-size: 14px;
     letter-spacing: 0.6px;
     margin: 5px 0 30px;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5px;
     text-transform: capitalize;
 }
 .key_project_desc{
     font-size: 18px;
     margin: 0 0 40px;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.3px;
     line-height: 1.6;
 
 }
@@ -334,7 +334,7 @@ a{
 .key_point_desc{
     font-size: 18px;
     margin: 0 0 0 15px;
-    letter-spacing: 1.2px;
+    /* letter-spacing: 1.2px; */
     text-transform: capitalize;
 }
 .v2_key_points{
