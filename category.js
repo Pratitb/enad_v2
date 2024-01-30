@@ -11,9 +11,10 @@ const headerIndustries = document.querySelector('.nav_industries')
 // category container
 const categoryName = document.querySelector('.category_name')
 const projectHead = document.querySelector('.project_head')
-const projectsWrap = document.querySelector('.project_cards_wrap')
+const projectsWrap = document.querySelectorAll('.project_cards_wrap')
 const projectCards = document.querySelectorAll('.project_card')
 const projectCardInside = document.querySelectorAll('.project_card_inside')
+const industryTab = document.querySelectorAll('.industry_tab')
 
 // EVENTLISTENERS ***********************************************************
 // on load
@@ -31,6 +32,9 @@ projectCards.forEach(projectCard => {
         activateProjectCard(cardClicked)
     })
 });
+industryTab.forEach((indusTab) => {
+    indusTab.addEventListener('click', changeProjects)
+})
 
 // FUNCTIONS ***********************************************************
 function showWaitMessage(){
@@ -48,11 +52,16 @@ function animateCategoryHeads(head, delay){
 }
 function projectCardScale(){
     setTimeout(() => {
-        projectsWrap.style.top = '170px';
-        projectsWrap.style.padding = '0 0 50px';
+        projectsWrap.forEach((projectWrap) => {
+            projectWrap.style.top = '190px';
+            projectWrap.style.padding = '0 0 50px';
+        })
         projectCards.forEach(projectCard => {
             projectCard.classList.add('scale_project_cards')
         });
+        industryTab.forEach((industryTab3) => {
+            industryTab3.classList.add('scale_project_cards')
+        })
     }, 2200);
 
 }
@@ -64,4 +73,33 @@ function activateProjectCard(cardClicked){
             clickedCardInside.classList.remove('project_card_active')
         }, 9000);
 
+}
+function changeProjects(tabElement){
+    industryTab.forEach((industryTab2) => {
+        industryTab2.classList.remove('industryTabActive')
+        findClickedTab(tabElement)
+    })
+}
+function findClickedTab(tabElement){
+    let clickedTab = tabElement.currentTarget
+        clickedTab.classList.add('industryTabActive')
+
+    let clickedTabName = clickedTab.dataset.name
+        // console.log(clickedTabName);
+        showClickedTabProjects(clickedTabName)
+}
+function showClickedTabProjects(clickedTabName){
+    projectsWrap.forEach((project) => {
+        if(project.dataset.name == clickedTabName){
+            if(!(project.classList.contains('project_wrap_active'))){
+                project.classList.add('project_wrap_active')
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            project.classList.remove('project_wrap_active')
+        }
+    })
 }
