@@ -99,7 +99,6 @@ a{
 
 /* hero section *********************************************/
 .hero_wrap{
-    height: calc(100vh - var(--header-height));
     padding: 10px;
 }
 .activeSection{
@@ -697,9 +696,6 @@ footer{
 }
 @media only screen and (max-width: 500px){
     /* hero */
-    .hero_wrap{
-        height: calc(100vh - 71px);
-    }
     .hero_head{
         font-size: 30px;
     }
