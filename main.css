@@ -695,6 +695,9 @@ footer{
 }
 @media only screen and (max-width: 500px){
     /* hero */
+    .hero_wrap{
+        height: 100%;
+    }
     .hero_head{
         font-size: 35px;
     }
@@ -703,7 +706,7 @@ footer{
         top: -120px;
     }
     .industries{
-        padding: 50px 0 0;
+        padding: 50px 0;
     }
     .industry_card_wrap{
         gap: 20px;
@@ -721,6 +724,9 @@ footer{
         overflow-wrap: break-word;
     }
     /* key projects */
+    .key_projects{
+        padding: 0;
+    }
     .key_projects_wrap{
         gap: 80px 0;
     }
