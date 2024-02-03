@@ -542,28 +542,6 @@ footer{
     color: #FFFFFF;
 }
 
-/* active classes */
-.text_active{
-    opacity: 1;
-}
-.scale_project_cards{
-    opacity: 1;
-    transform: scale(1);
-}
-.project_wrap_active{
-    opacity: 1;
-}
-.project_card_active{
-    transform: rotateY(180deg);
-}
-.show_sticky_industries{
-    top: 0px;
-}
-.industryTabActive{
-    color: #FFFFFF;
-    background-color: var(--main-black);
-}
-
 /* animations */
 @keyframes show_down {
     0%{
@@ -794,4 +772,26 @@ footer{
     .company_details{
         font-size: 12px;
     }
+}
+
+/* active classes */
+.text_active{
+    opacity: 1;
+}
+.scale_project_cards{
+    opacity: 1;
+    transform: scale(1);
+}
+.project_wrap_active{
+    opacity: 1;
+}
+.project_card_active{
+    transform: rotateY(180deg);
+}
+.show_sticky_industries{
+    top: 0px;
+}
+.industryTabActive{
+    color: #FFFFFF;
+    background-color: var(--main-black);
 }
