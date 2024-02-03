@@ -18,7 +18,7 @@
     --border-radius: 10px;
     --header-height: 90px;
     --hero-overlay: rgba(0,0,0,0.2);
-    --industry-overlay: rgba(0,0,0,0.3);
+    --industry-overlay: rgba(0,0,0,0.4);
     --cta-width: 200px;
     --category-frame-time: 1.3s;
     --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -130,20 +130,19 @@ a{
     max-width: 600px;
     margin: 10px 0 50px;
     line-height: 1.2;
+    letter-spacing: 1px;
     color: var(--main-black);
 }
 .hero_cta{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid; */
+    text-transform: capitalize;
     width: 100%;
     max-width: var(--cta-width);
     height: 55px;
     font-size: 22px;
-    /* padding: 10px 20px; */
     color: #000000;
-    /* background-color: #171820; */
     border: 1px solid var(--main-black);
     border-radius: var(--border-radius);
     transition: 0.3s all;
@@ -157,12 +156,13 @@ a{
 
 /* industries *********************************************/
 .industries{
-    padding: 80px 0 0;
+    padding: 80px 0;
 }
 .industry_card_wrap{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 .industry_card{
     position: relative;
@@ -202,9 +202,12 @@ a{
     font-size: 22px;
     letter-spacing: 1.2px;
     z-index: 1;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
+}
+.hospital_healthcare{
+    top: 40%;
 }
 .industry_cta{
     position: absolute;
@@ -245,9 +248,6 @@ a{
 }
 
 /* key projects */
-.key_projects{
-    padding: 60px 0;
-}
 .key_projects_head{
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -335,7 +335,7 @@ a{
 }
 .key_point_desc{
     font-size: 18px;
-    margin: 0 0 0 15px;
+    margin: 0 0 0 5px;
     /* letter-spacing: 1.2px; */
     text-transform: capitalize;
 }
@@ -605,12 +605,24 @@ footer{
         text-align: center;
     }
     .hero_head{
+        font-size: 44px;
         margin: 10px auto 50px;
     }
     /* industries */
-    .industry_card_wrap{
-        justify-content: center;
-        gap: 40px;
+    .industry_card{
+        max-width: 170px;
+    }
+    .industry_overlay{
+        max-height: 255px;
+    }
+    .industry_name{
+        font-size: 16px;
+    }
+    .industry_cta{
+        right: 15px;
+    }
+    .industry_cta_arrow{
+        background-color: rgba(255, 255, 255, 0.7);
     }
     /* key projects */
     .key_project{
@@ -642,18 +654,29 @@ footer{
 @media only screen and (max-width: 768px){
     /* hero */
     .hero_head{
-        font-size: 40px;
+        font-size: 36px;
     }
     /* industries */
+    .industry_card_wrap{
+        max-width: 430px;
+        margin: 0 auto;
+    }
     .industry_card{
-        max-width: 210px;
+        max-width: 205px;
     }
     .industry_overlay{
-        max-height: 315px;
+        max-height: 307px;
+    }
+    .industry_name{
+        font-size: 18px;
     }
     .sticky_industries{
-        top: -100px;
+        padding: 12px;
     }
+    .sticky_industry{
+        font-size: 12px;
+    }
+    /* key projects */
     .key_projects_head{
         font-size: 40px;
         margin: 0 0 40px;
@@ -678,17 +701,14 @@ footer{
         height: 100%;
     }
     .hero_head{
-        font-size: 35px;
+        font-size: 30px;
     }
     /* industries */
     .sticky_industries{
-        top: -120px;
+        display: none;
     }
     .industries{
         padding: 50px 0;
-    }
-    .industry_card_wrap{
-        gap: 20px;
     }
     .industry_card{
         max-width: 170px;
@@ -696,11 +716,8 @@ footer{
     .industry_overlay{
         max-height: 255px;
     }
-    .industry_name{
-        font-size: 16px;
-        padding: 0 5px;
-        max-width: 100%;
-        overflow-wrap: break-word;
+    .industry_cta{
+        right: 15px;
     }
     /* key projects */
     .key_projects{
@@ -741,16 +758,26 @@ footer{
         line-height: 1.4;
     }
     /* industries */
+    .industry_card_wrap{
+        gap: 10px;
+    }
     .industry_card{
-        max-width: 142px;
+        max-width: 145px;
     }
     .industry_overlay{
-        max-height: 213px;
+        max-height: 217px;
     }
     .industry_name{
         top: 40%;
+        font-size: 15px;
+    }
+    .hospital_healthcare{
+        top: 30%;
     }
     /* key projects */
+    .key_project_desc{
+        text-align: justify;
+    }
     .v2_key_points{
         flex-direction: column;
     }
@@ -758,10 +785,13 @@ footer{
         font-size: 18px;
     }
     .key_point_desc{
-        font-size: 18px;
+        font-size: 16px;
     }
     .ongoing_project{
+        width: 7px;
+        height: 7px;
         left: -18px;
+        top: 12px;
     }
     .client_head{
         font-size: 30px;
@@ -771,6 +801,14 @@ footer{
     }
     .company_details{
         font-size: 12px;
+    }
+    @keyframes live_indicator {
+        0%{
+           box-shadow: 0 0 1px 2px rgba(76, 175, 80, 0.4);
+        }
+        100%{
+            box-shadow: 0 0 4px 6px rgba(76, 175, 80, 0.4);
+        }
     }
 }
 
