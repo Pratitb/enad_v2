@@ -698,7 +698,7 @@ footer{
 @media only screen and (max-width: 500px){
     /* hero */
     .hero_wrap{
-        height: 100dvh;
+        height: calc(100vh - 71px);
     }
     .hero_head{
         font-size: 30px;
