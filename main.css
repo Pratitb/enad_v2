@@ -44,7 +44,9 @@ a{
     margin: 0 auto;
     padding: 0 10px;
 }
-
+.header_atf{
+    height: 100vh;
+}
 /* header *********************************************/
 .header_container{
     display: flex;
@@ -696,6 +698,9 @@ footer{
 }
 @media only screen and (max-width: 500px){
     /* hero */
+    .hero_wrap{
+        height: 100svh;
+    }
     .hero_head{
         font-size: 30px;
     }
