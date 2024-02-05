@@ -472,7 +472,7 @@ a{
     background-color: var(--main-black);
 }
 .project_cards_wrap{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     position: absolute;
     top: 0;
@@ -823,6 +823,7 @@ footer{
 }
 .project_wrap_active{
     opacity: 1;
+    display: flex;
 }
 .project_card_active{
     transform: rotateY(180deg);
