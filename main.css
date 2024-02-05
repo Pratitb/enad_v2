@@ -455,6 +455,7 @@ a{
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    /* justify-content: center; */
     gap: 0 10px;
 }
 .industry_tab{
@@ -474,13 +475,13 @@ a{
 .project_cards_wrap{
     display: none;
     flex-wrap: wrap;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
+    position: relative;
+    /* top: 0; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     gap: 40px;
     opacity: 0;
-    margin: 0 auto;
 }
 .project_card{
     width: 100%;
@@ -824,6 +825,10 @@ footer{
 .project_wrap_active{
     opacity: 1;
     display: flex;
+}
+.project_wrap_position{
+    top: 190px;
+    padding: 0 10px 50px;
 }
 .project_card_active{
     transform: rotateY(180deg);

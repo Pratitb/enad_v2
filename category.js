@@ -19,8 +19,8 @@ const industryTab = document.querySelectorAll('.industry_tab')
 // EVENTLISTENERS ***********************************************************
 // on load
 document.addEventListener('DOMContentLoaded', function(){
-    animateCategoryHeads(projectHead, 1500)
-    animateCategoryHeads(categoryName, 2000)
+    // animateCategoryHeads(projectHead, 1500)
+    animateCategoryHeads(categoryName, 1500)
     projectCardScale()
 })
 // header
@@ -53,8 +53,7 @@ function animateCategoryHeads(head, delay){
 function projectCardScale(){
     setTimeout(() => {
         projectsWrap.forEach((projectWrap) => {
-            projectWrap.style.top = '190px';
-            projectWrap.style.padding = '0 0 50px';
+            projectWrap.classList.add('project_wrap_position')
         })
         projectCards.forEach(projectCard => {
             projectCard.classList.add('scale_project_cards')
@@ -62,7 +61,7 @@ function projectCardScale(){
         industryTab.forEach((industryTab3) => {
             industryTab3.classList.add('scale_project_cards')
         })
-    }, 2200);
+    }, 2000);
 
 }
 function activateProjectCard(cardClicked){
