@@ -877,6 +877,10 @@ footer{
     .category_name, .project_head{
         font-size: 14px;
     }
+    .hospitality_head{
+        font-size: 12px;
+        letter-spacing: 2.2px;
+    }
     .industry_tabs{
         position: fixed;
         z-index: 1;
