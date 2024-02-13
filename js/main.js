@@ -46,8 +46,6 @@ document.addEventListener('DOMContentLoaded', animateHero)
 // header
 keyProjectsNavLink.addEventListener('click', scrollToKeyProjects)
 industriesNavLink.addEventListener('click', scrollToIndustries)
-headerCallCta.addEventListener('click', showWaitMessage)
-headerCallCtaPopup.addEventListener('click', closeheaderCallCtaPopup)
 
 // atf
 heroCta.addEventListener('click', scrollToKeyProjects)
