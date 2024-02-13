@@ -14,6 +14,7 @@
 }
 :root{
     --main-green: #4CAF50;
+    --light-green: #82d785;
     --main-black: #232431;
     --border-radius: 10px;
     --header-height: 90px;
@@ -524,6 +525,7 @@ p.industry_tab:nth-last-child(1){
     max-height: 232px;
 }
 .project_card_back{
+    width: 100%;
     height: 232px;
     padding: 20px;
     letter-spacing: 1px;
@@ -533,8 +535,16 @@ p.industry_tab:nth-last-child(1){
     background-color: var(--main-black);
 }
 .project_name{
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
+    margin: 0 0 5px;
+    line-height: 1.2;
+}
+.project_detail{
+    text-decoration: underline;
+}
+.collab_partner{
+    color: var(--main-green);
 }
 .interiors_high_enad{
     text-transform: none;
