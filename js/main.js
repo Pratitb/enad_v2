@@ -58,16 +58,6 @@ heroCta.addEventListener('click', scrollToKeyProjects)
 function scrollToIndustries(){
     industriesSection.scrollIntoView()
 }
-// wait message on call cta click
-function showWaitMessage(){
-    headerCallCtaPopup.classList.add('active_flex')
-}
-// close wait message
-function closeheaderCallCtaPopup(callClick){
-    if(!(callClick.target.classList.contains('call_cta_container'))){
-        headerCallCtaPopup.classList.remove('active_flex') 
-    }
-}
 
 // atf
 // hero section animation

@@ -76,27 +76,6 @@ a{
 .nav_links:hover{
     text-decoration: underline;
 }
-.call_cta_wrap{
-    display: flex;
-    width: 100%;
-    max-width: var(--cta-width);
-}
-.call_cta{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: var(--cta-width);
-    border-radius: var(--border-radius);
-    transition: 0.3s all;
-    color: #FFFFFF;
-    background-color: var(--main-black);
-}
-.call_cta:hover{
-    text-decoration: none;
-    border: 2px solid;
-    color: var(--main-black);
-    background-color: transparent;
-}
 
 
 /* hero section *********************************************/
@@ -628,7 +607,7 @@ footer{
     .logo_wrap{
         text-align: center;
     }
-    .navigation, .call_cta_wrap{
+    .navigation{
         display: none;
     }
     /* hero */
