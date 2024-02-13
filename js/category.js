@@ -23,9 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
     animateCategoryHeads(categoryName, 1500)
     projectCardScale()
 })
-// header
-callCta.addEventListener('click', showWaitMessage)
-callCtaPopup.addEventListener('click', closeCallCtaPopup)
+
 // project cards
 projectCards.forEach(projectCard => {
     projectCard.addEventListener('click', function(cardClicked){
