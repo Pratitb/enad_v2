@@ -851,9 +851,13 @@ footer{
     }
     .industry_overlay{
         max-height: 255px;
+        background-color: rgba(0,0,0,0.3);
     }
     .industry_cta{
         right: 15px;
+    }
+    .industry_cta .material-symbols-outlined{
+        font-size: 22px;
     }
     .industry_cta_arrow{
         background-color: rgba(255, 255, 255, 1);
