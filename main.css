@@ -768,7 +768,7 @@ footer{
         margin: 0 0 40px;
     }
     .key_project{
-        gap: 20px 0;
+        gap: 10px 0;
     }
     .v2_key_points{
         gap: 10px 0;
@@ -855,6 +855,9 @@ footer{
     .industry_cta{
         right: 15px;
     }
+    .industry_cta_arrow{
+        background-color: rgba(255, 255, 255, 1);
+    }
     /* key projects */
     .key_projects{
         padding: 0;
@@ -866,17 +869,18 @@ footer{
         font-size: 35px;
     }
     .key_project_name{
-        font-size: 20px;
+        font-size: 28px;
     }
     .ongoing_project{
         top: 10px;
         left: -26px;
     }
     .key_project_time{
+        font-size: 16px;
         margin: 5px 0 20px;
     }
     .key_project_desc{
-        font-size: 16px;
+        font-size: 20px;
         margin: 0 0 20px;
         line-height: 1.5;
     }
@@ -897,8 +901,13 @@ footer{
 @media only screen and (max-width: 400px){
     /* hero */
     .hero_head{
-        font-size: 28px;
+        font-size: 32px;
         line-height: 1.4;
+    }
+    .hero_cta{
+        font-size: 20px;
+        max-width: 180px;
+        height: 48px;
     }
     /* industries */
     .industry_card_wrap{
@@ -912,23 +921,23 @@ footer{
     }
     .industry_name{
         top: 40%;
-        font-size: 15px;
+        font-size: 18px;
     }
     .hospital_healthcare{
         top: 30%;
     }
     /* key projects */
     .key_project_desc{
-        text-align: justify;
+        text-align: center;
     }
     .v2_key_points{
         flex-direction: column;
     }
     .material-symbols-outlined{
-        font-size: 18px;
+        font-size: 30px;
     }
     .key_point_desc{
-        font-size: 16px;
+        font-size: 20px;
     }
     .ongoing_project{
         width: 7px;
