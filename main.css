@@ -473,7 +473,7 @@ p.industry_tab:nth-last-child(1){
 }
 .project_card{
     width: 100%;
-    height: 232px;
+    height: 233px;
     max-width: 350px;
     perspective: 2000px;
     transform: scale(0);
@@ -501,7 +501,7 @@ p.industry_tab:nth-last-child(1){
 .project_card_front, .project_card_back{
     position: absolute;
     backface-visibility: hidden;
-    max-height: 232px;
+    /* max-height: 232px; */
 }
 .project_card_back{
     width: 100%;
@@ -662,9 +662,6 @@ footer{
     .industry_tabs{
         justify-content: center;
     }
-    .industry_tab{
-        font-size: 14px;
-    }
 }
 @media only screen and (max-width: 1023px){
     /* header */
@@ -785,24 +782,8 @@ footer{
         font-size: 18px;
         letter-spacing: 6px;
     }
-    .industry_tab{
-        font-size: 14px;
-    }
     .project_cards_wrap{
         gap: 20px;
-    }
-    .project_card{
-        max-width: 230px;
-        height: 153px;
-    }
-    .project_card_front, .project_card_back{
-        max-height: 153px;
-    }
-    .project_name{
-        font-size: 16px;
-    }
-    .project_desc{
-        font-size: 11px;
     }
     .footer_top{
         flex-direction: column;
@@ -900,19 +881,10 @@ footer{
     }
     .industry_tabs{
         gap: 0;
+        top: 120px;
     }
     .industry_tab{
         font-size: 15px;
-    }
-    .project_card{
-        max-width: 350px;
-        height: 232px;
-    }
-    .project_card_front, .project_card_back{
-        max-height: 255px;
-    }
-    .project_name{
-        font-size: 24px;
     }
     .project_desc{
         font-size: 16px;
@@ -999,17 +971,25 @@ footer{
     }
     .industry_tab{
         text-align: center;
-        font-size: 11px;
+        font-size: 12px;
         padding: 6px 8px;
     }
     .project_wrap_position{
         top: 160px;
     }
-    .project_card{
-        height: 204px;
-    }
-    .project_card_front, .project_card_back{
+    .project_card, .project_card_front, .project_card_back, .project_image{
+        max-width: 304px;
         max-height: 204px;
+        /* overflow: auto; */
+    }
+    .project_card_back{
+        padding: 10px 20px;
+    }
+    .project_name{
+        font-size: 20px;
+    }
+    .project_desc{
+        font-size: 14px;
     }
 }
 
