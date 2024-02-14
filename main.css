@@ -898,8 +898,24 @@ footer{
     .category_name, .project_head{
         font-size: 16px;
     }
+    .industry_tabs{
+        gap: 0;
+    }
     .industry_tab{
-        font-size: 12px;
+        font-size: 15px;
+    }
+    .project_card{
+        max-width: 350px;
+        height: 232px;
+    }
+    .project_card_front, .project_card_back{
+        max-height: 255px;
+    }
+    .project_name{
+        font-size: 24px;
+    }
+    .project_desc{
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 400px){
@@ -988,6 +1004,12 @@ footer{
     }
     .project_wrap_position{
         top: 160px;
+    }
+    .project_card{
+        height: 204px;
+    }
+    .project_card_front, .project_card_back{
+        max-height: 204px;
     }
 }
 
