@@ -469,7 +469,7 @@ p.industry_tab:nth-last-child(1){
 }
 .project_wrap_position{
     top: 190px;
-    padding: 0 10px 0;
+    padding: 0 10px 250px;
 }
 .project_card{
     width: 100%;
