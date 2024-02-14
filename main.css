@@ -531,10 +531,77 @@ p.industry_tab:nth-last-child(1){
 
 /* footer *********************************************/
 footer{
+    padding: 20px 0;
+    background-color: var(--main-black);
+}
+.footer_container{
+    display: flex;
+    flex-direction: column;
+}
+.footer_top{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    background-color: var(--main-black);
+}
+.footer_logo_wrap, .footer_info, .footer_links_head, .footer_links a{
+    color: #FFFFFF;
+}
+.footer_logo{
+    font-size: 26px;
+}
+.footer_logo_full{
+    font-size: 14px;
+}
+.footer_info{
+    max-width: 300px;
+    margin: 10px 0 0;
+}
+.footer_links, .footer_contact{
+    display: flex;
+    flex-direction: column;
+}
+.footer_links_head{
+    font-size: 20px;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+.footer_links{
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+}
+.footer_link{
+    font-size: 17px;
+}
+.footer_link:hover{
+    text-decoration: underline;
+}
+.footer_contact{
+    max-width: 300px;
+    gap: 10px 0;
+}
+.footer_contact a{
+    color: #FFFFFF;
+}
+.icon_contact{
+    display: flex;
+    align-items: center;
+}
+.icon_contact .material-symbols-outlined{
+    margin: 0 10px 0 0;
+    color: #FFFFFF;
+}
+.footer_contact_detail:hover{
+    text-decoration: underline;
+}
+.footer_bottom{
+    padding: 10px 0 0;
+    margin: 20px 0 0;
+    border-top: 1px solid var(--light-green);
+}
+.copyright_social{
+    display: flex;
+    justify-content: space-between;
 }
 .company_details{
     color: #FFFFFF;
@@ -660,6 +727,15 @@ footer{
         text-align: initial;
         flex-direction: row;
     }
+    .footer_links_head_wrap{
+        display: none;
+    }
+    .footer_top{
+        justify-content: center;
+    }
+    .copyright_social{
+        justify-content: center;
+    }
 }
 @media only screen and (max-width: 768px){
     /* hero */
@@ -727,6 +803,25 @@ footer{
     }
     .project_desc{
         font-size: 11px;
+    }
+    .footer_top{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px 0;
+    }
+    .footer_logo_wrap, .footer_info{
+        text-align: center;
+    }
+    
+    .footer_links_head{
+        text-align: center;
+        margin: 0;
+    }
+    .footer_contact{
+        max-width: 250px;
+    }
+    .icon_contact{
+        justify-content: center;
     }
 }
 @media only screen and (max-width: 500px){
@@ -846,9 +941,6 @@ footer{
     }
     .client img{
         max-width: 140px;
-    }
-    .company_details{
-        font-size: 12px;
     }
     @keyframes live_indicator {
         0%{
