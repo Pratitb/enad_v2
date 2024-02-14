@@ -813,10 +813,6 @@ footer{
     .logo_full{
         font-size: 12px;
     }
-    /* hero */
-    .hero_wrap{
-        height: 100svh;
-    }
     .hero_head{
         font-size: 30px;
     }
@@ -876,12 +872,19 @@ footer{
         max-width: 170px;
     }
     /* categories */
+    .category_name_wrap{
+        top: 62px;
+    }
     .category_name, .project_head{
         font-size: 16px;
     }
     .industry_tabs{
+        position: fixed;
+        z-index: 1;
+        top: 95px;
         gap: 0;
-        top: 120px;
+        padding: 10px 0;
+        background-color: #FFFFFF;
     }
     .industry_tab{
         font-size: 15px;
@@ -963,11 +966,7 @@ footer{
         letter-spacing: 2.2px;
     }
     .industry_tabs{
-        position: fixed;
-        z-index: 1;
         top: 90px;
-        padding: 10px 0;
-        background-color: #FFFFFF;
     }
     .industry_tab{
         text-align: center;
