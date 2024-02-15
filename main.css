@@ -563,6 +563,7 @@ p.industry_tab:nth-last-child(1){
     display: flex;
     flex-direction: column;
     gap: 50px 0;
+    padding: 0 10px 250px;
 }
 .about_main_text_wrap{
     display: flex;
