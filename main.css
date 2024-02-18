@@ -543,6 +543,9 @@ p.industry_tab:nth-last-child(1){
     z-index: 1;
 }
 .industry_nav_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
     padding: 10px 20px;
     border: 1px solid;
@@ -552,6 +555,15 @@ p.industry_tab:nth-last-child(1){
 .industry_nav_btn:hover{
     color: #FFFFFF;
     background-color: var(--main-black);
+}
+.industry_nav_arr, .industry_nav_arr_back{
+    font-size: 22px;
+}
+.industry_nav_arr{
+    margin: 2px 0 0 5px;
+}
+.industry_nav_arr_back{
+    margin: 2px 5px 0 0;
 }
 .industry_nav_name{
     font-weight: 700;
