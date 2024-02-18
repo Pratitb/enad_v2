@@ -528,6 +528,7 @@ p.industry_tab:nth-last-child(1){
     text-decoration: underline;
 }
 .collab_partner{
+    text-decoration: none;
     color: var(--main-green);
 }
 .interiors_high_enad{
