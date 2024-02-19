@@ -549,7 +549,7 @@ p.industry_tab:nth-last-child(1){
     font-size: 18px;
     padding: 10px 20px;
     /* border: 1px solid; */
-    border-radius: var(--border-radius);
+    /* border-radius: var(--border-radius); */
     transition: 0.3s all;
 }
 .industry_nav_btn:hover{
