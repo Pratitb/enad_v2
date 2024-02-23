@@ -599,6 +599,10 @@ p.industry_tab:nth-last-child(1){
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.team_cards{
+    gap: 0 20px;
+    flex-wrap: nowrap;
+}
 .team_card{
     width: 100%;
     max-width: 250px;
@@ -618,7 +622,10 @@ p.industry_tab:nth-last-child(1){
 }
 .intern_cards{
     justify-content: flex-start;
-    gap: 0 60px;
+    gap: 0 20px;
+}
+.intern_cards .team_card:nth-last-child(-n+2){
+    border: none;
 }
 .member_photo{
     width: 100%;
@@ -637,11 +644,13 @@ p.industry_tab:nth-last-child(1){
     top: 20px;
     right: 20px;
     line-height: 1;
-    font-size: 12px;
+    font-size: 10px;
+    font-weight: 700;
     text-align: center;
+    color: #159d1b;
 }
 .enad_time{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
 .associates_head{
@@ -856,6 +865,15 @@ footer{
     .copyright_social{
         justify-content: center;
     }
+    /* about */
+    .team_cards{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .core_members_head, .associates_head{
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 768px){
     /* hero */
@@ -907,6 +925,15 @@ footer{
     }
     .project_cards_wrap{
         gap: 20px;
+    }
+    /* about */
+    .about_main_text_wrap{
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    .associates_wrap{
+        justify-content: center;
+        gap: 30px;
     }
     .footer_top{
         flex-direction: column;
