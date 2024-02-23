@@ -1,10 +1,11 @@
 // VARIABLES ***********************************************************
 // header
 const navLinks = document.querySelectorAll('.nav_links')
-const industriesNavLink = document.querySelector('.nav_industries')
 const keyProjectsNavLink = document.querySelector('.nav_key_projects')
-const headerCallCta = document.querySelector('.call_cta')
-const headerCallCtaPopup = document.querySelector('.call_cta_popup')
+const industriesNavLink = document.querySelector('.nav_industries')
+const mobMenuBtn = document.querySelector('.mobile_menu_btn')
+const mobMenu = document.querySelector('.mobile_menu')
+const menuOpenIcon = document.querySelector('.menu_open_icon')
 
 // hero section
 const heroSection = document.querySelector('.hero')
@@ -46,6 +47,11 @@ document.addEventListener('DOMContentLoaded', animateHero)
 // header
 keyProjectsNavLink.addEventListener('click', scrollToKeyProjects)
 industriesNavLink.addEventListener('click', scrollToIndustries)
+mobMenuBtn.addEventListener('click', function(){
+    openCloseMenu()
+    showMenuLinks()
+    changeIcon()
+})
 
 // atf
 heroCta.addEventListener('click', scrollToKeyProjects)
@@ -55,6 +61,9 @@ heroCta.addEventListener('click', scrollToKeyProjects)
 // cta scroll
 function scrollToIndustries(){
     industriesSection.scrollIntoView()
+}
+function openCloseMenu(){
+    mobMenu.classList.toggle('mob_menu_active')
 }
 
 // atf
