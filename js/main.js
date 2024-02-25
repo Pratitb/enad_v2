@@ -6,6 +6,8 @@ const industriesNavLink = document.querySelector('.nav_industries')
 const mobMenuBtn = document.querySelector('.mobile_menu_btn')
 const mobMenu = document.querySelector('.mobile_menu')
 const menuOpenIcon = document.querySelector('.menu_open_icon')
+const menuCloseIcon = document.querySelector('.menu_close_icon')
+const mobMenuLink = document.querySelectorAll('.mob_menu_link')
 
 // hero section
 const heroSection = document.querySelector('.hero')
@@ -20,7 +22,7 @@ const stickyIndustries = document.querySelector('.sticky_industries')
 const keyProjectsSection = document.querySelector('.key_projects')
 
 // EVENT LISTENERS ***********************************************************
-// document event
+document.addEventListener('DOMContentLoaded', animateHero)
 document.addEventListener('scroll', function(){
 
     const industries = industriesSection.getBoundingClientRect()
@@ -42,18 +44,19 @@ document.addEventListener('scroll', function(){
         stickyIndustries.classList.remove('show_sticky_industries')
     }
 })
-document.addEventListener('DOMContentLoaded', animateHero)
-
-// header
 keyProjectsNavLink.addEventListener('click', scrollToKeyProjects)
 industriesNavLink.addEventListener('click', scrollToIndustries)
 mobMenuBtn.addEventListener('click', function(){
     openCloseMenu()
-    showMenuLinks()
     changeIcon()
 })
-
-// atf
+mobMenuLink.forEach(menuLink => {
+    menuLink.addEventListener('click', function(){
+        openCloseMenu()
+        hideMenuAndLinks()
+        changeIcon()
+    })
+});
 heroCta.addEventListener('click', scrollToKeyProjects)
 
 // FUNCTIONS ***********************************************************
@@ -62,19 +65,52 @@ heroCta.addEventListener('click', scrollToKeyProjects)
 function scrollToIndustries(){
     industriesSection.scrollIntoView()
 }
+
+// header
 function openCloseMenu(){
-    mobMenu.classList.toggle('mob_menu_active')
+    if(!(mobMenu.classList.contains('mob_menu_active'))){
+        mobMenu.classList.add('mob_menu_active')
+        showMenuLinks()
+    }
+    else{
+        hideMenuAndLinks()
+    }
+}
+function showMenuLinks(){
+    setTimeout(() => {
+        mobMenuLink.forEach(menuLink => {
+            menuLink.classList.add('show_mob_menu_link')
+        });
+    }, 400);
+}
+function hideMenuAndLinks(){
+    mobMenuLink.forEach(menuLink => {
+        menuLink.classList.remove('show_mob_menu_link')
+    });
+    setTimeout(() => {
+        mobMenu.classList.remove('mob_menu_active')
+    }, 600);
+}
+function changeIcon(){
+    if(menuOpenIcon.classList.contains('show_mob_icon')){
+        menuOpenIcon.classList.remove('show_mob_icon')
+        menuCloseIcon.classList.add('show_mob_icon')
+    }
+    else{
+        setTimeout(() => {
+            menuOpenIcon.classList.add('show_mob_icon')
+            menuCloseIcon.classList.remove('show_mob_icon')
+        }, 1000);
+    }
 }
 
 // atf
-// hero section animation
 function animateHero(){
     heroSection.classList.add('activeSection')
     setTimeout(() => {
         heroContent.classList.add('text_active')
     }, 1800);
 }
-// hero cta scroll
 function scrollToKeyProjects(){
     keyProjectsSection.scrollIntoView()
 }

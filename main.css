@@ -798,7 +798,6 @@ footer{
 @media only screen and (max-width: 1023px){
     /* mobile menu */
     .mobile_menu{
-
         position: absolute;
         top: 80px;
         width: 100%;
@@ -817,19 +816,21 @@ footer{
     .mob_menu_link{
         opacity: 0;
         font-size: 30px;
+        transition: 0.5s all;
     }
     .mob_menu_icon{
+        display: none;
         font-size: 40px;
         font-weight: 600;
-    }
-    .menu_close_icon{
-        display: none;
     }
     .mob_menu_active{
         height: 300px;
     }
     .show_mob_menu_link{
         opacity: 1;
+    }
+    .show_mob_icon{
+        display: inline;
     }
     /* header */
     .header_container{
@@ -996,7 +997,7 @@ footer{
 }
 @media only screen and (max-width: 500px){
     .mobile_menu{
-        top: 72px;
+        top: 70px;
     }
     .mob_menu_link{
         font-size: 25px;
