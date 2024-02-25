@@ -739,6 +739,11 @@ footer{
     color: #FFFFFF;
 }
 
+/* mobile menu */
+.mobile_menu_btn, .mobile_menu{
+    display: none;
+}
+
 /* animations */
 @keyframes show_down {
     0%{
@@ -797,6 +802,9 @@ footer{
 }
 @media only screen and (max-width: 1023px){
     /* mobile menu */
+    .mobile_menu_btn, .mobile_menu{
+        display: inline;
+    }
     .mobile_menu{
         position: absolute;
         top: 80px;
@@ -824,7 +832,7 @@ footer{
         font-size: 40px;
         font-weight: 600;
     }
-
+    /* mobile menu active */
     .mob_menu_active{
         visibility: visible;
         height: 300px;
