@@ -814,6 +814,7 @@ footer{
         box-shadow: var(--box-shadow);
     }
     .mob_menu_link{
+        visibility: hidden;
         opacity: 0;
         font-size: 30px;
         transition: 0.5s all;
@@ -823,10 +824,13 @@ footer{
         font-size: 40px;
         font-weight: 600;
     }
+
     .mob_menu_active{
+        visibility: visible;
         height: 300px;
     }
     .show_mob_menu_link{
+        visibility: visible;
         opacity: 1;
     }
     .show_mob_icon{
