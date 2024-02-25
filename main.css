@@ -811,7 +811,7 @@ footer{
         gap: 20px 0;
         transition: 0.3s all;
         background-color: #FFFFFF;
-        box-shadow: var(--box-shadow);
+        /* box-shadow: var(--box-shadow); */
     }
     .mob_menu_link{
         visibility: hidden;
