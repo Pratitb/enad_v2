@@ -821,6 +821,9 @@ footer{
         background-color: #FFFFFF;
         /* box-shadow: var(--box-shadow); */
     }
+    .category_mobile_menu{
+        top: 107px;
+    }
     .mob_menu_link{
         visibility: hidden;
         opacity: 0;
@@ -835,7 +838,7 @@ footer{
     /* mobile menu active */
     .mob_menu_active{
         visibility: visible;
-        height: 300px;
+        height: 280px;
     }
     .show_mob_menu_link{
         visibility: visible;
@@ -928,6 +931,9 @@ footer{
     }
 }
 @media only screen and (max-width: 768px){
+    .mob_menu_active{
+        height: 260px;
+    }
     /* hero */
     .hero_head{
         font-size: 36px;
@@ -1010,6 +1016,13 @@ footer{
 @media only screen and (max-width: 500px){
     .mobile_menu{
         top: 70px;
+    }
+    .mob_menu_active{
+        height: 230px;
+    }
+    .category_mobile_menu{
+        top: 95px;
+        z-index: 2;
     }
     .mob_menu_link{
         font-size: 25px;
