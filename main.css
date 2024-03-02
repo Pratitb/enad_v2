@@ -90,8 +90,8 @@ a{
     display: flex;
     align-items: center;
     border-radius: var(--border-radius);
-    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)), url('assets/atf_bg.jpeg') no-repeat center;
-    background-size: cover;
+    background: url('assets/hero_v2.gif') no-repeat right;
+    background-size: contain;
 }
 .hero_container{
     opacity: 0;

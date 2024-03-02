@@ -106,10 +106,10 @@ function changeIcon(){
 
 // atf
 function animateHero(){
-    heroSection.classList.add('activeSection')
+    // heroSection.classList.add('activeSection')
     setTimeout(() => {
         heroContent.classList.add('text_active')
-    }, 1800);
+    }, 300);
 }
 function scrollToKeyProjects(){
     keyProjectsSection.scrollIntoView()
