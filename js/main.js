@@ -82,6 +82,7 @@ function showMenuLinks(){
             menuLink.classList.add('show_mob_menu_link')
         });
     }, 400);
+    pageScrolling('hidden')
 }
 function hideMenuAndLinks(){
     mobMenuLink.forEach(menuLink => {
@@ -90,6 +91,7 @@ function hideMenuAndLinks(){
     setTimeout(() => {
         mobMenu.classList.remove('mob_menu_active')
     }, 600);
+    pageScrolling('scroll')
 }
 function changeIcon(){
     if(menuOpenIcon.classList.contains('show_mob_icon')){
@@ -102,6 +104,9 @@ function changeIcon(){
             menuCloseIcon.classList.remove('show_mob_icon')
         }, 1000);
     }
+}
+function pageScrolling(scrollVal){
+    document.documentElement.style.overflowY = scrollVal;
 }
 
 // atf
