@@ -13,7 +13,7 @@
     font-size: 32px;
 }
 :root{
-    --main-green: #4CAF50;
+    --main-green: #388E3C;
     --light-green: #82d785;
     --main-black: #232431;
     --border-radius: 10px;
@@ -244,7 +244,7 @@ a{
 .key_project{
     display: flex;
     align-items: flex-end;
-    gap: 0 40px;
+    gap: 0 38px;
 }
 .key_project_left{
     max-width: 800px;
@@ -1237,5 +1237,5 @@ footer{
 }
 .industryTabActive{
     color: #FFFFFF;
-    background-color: var(--main-black);
+    background-color: var(--main-green);
 }
