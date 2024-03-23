@@ -3,19 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* @font-face {
-    font-family: 'quackey_regular';
-    src: url('assets/fonts/salina_trial_regular.otf') format('opentype');
+@font-face {
+    font-family: 'fff_tusjbold';
+    src: url('/assets/fonts/fff_tusj-webfont.woff2') format('woff2'),
+         url('/assets/fonts/fff_tusj-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-} */
+}
 .material-symbols-outlined{
     font-size: 32px;
 }
 :root{
     --main-green: #388E3C;
-    --light-green: #82d785;
     --main-black: #232431;
+    --light-green: #82d785;
     --border-radius: 10px;
     --header-height: 90px;
     --hero-overlay: rgba(0,0,0,0.2);
@@ -28,7 +29,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Inter', sans-serif;
     /* font-family: 'Rubik', sans-serif; */
     font-family: 'Kanit', sans-serif;
     /* font-family: 'quackey_regular'; */
@@ -57,8 +58,11 @@ a{
     padding: 10px;
 }
 .logo{
+    font-family: 'fff_tusjbold';
     font-size: 30px;
-    line-height: 1;
+    background: linear-gradient(to right, var(--main-green) 0, var(--main-black) 50%);    line-height: 1;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .logo_full{
     font-size: 14px;
@@ -75,6 +79,8 @@ a{
 }
 .nav_links:hover{
     text-decoration: underline;
+    text-decoration-color: var(--main-green);
+    text-decoration-thickness: 3px;
 }
 
 
@@ -90,8 +96,8 @@ a{
     display: flex;
     align-items: center;
     border-radius: var(--border-radius);
-    background: url('assets/hero_v2.gif') no-repeat right;
-    background-size: contain;
+    background: url('assets/atf_bg.jpeg') no-repeat;
+    background-size: cover;
 }
 .hero_container{
     opacity: 0;
@@ -122,15 +128,17 @@ a{
     max-width: var(--cta-width);
     height: 55px;
     font-size: 22px;
-    color: #000000;
-    border: 1px solid var(--main-black);
+    color: #fff;
+    background-color: var(--main-green);
+    /* border: 1px solid var(--main-black); */
     border-radius: var(--border-radius);
     transition: 0.3s all;
 }
 .hero_cta:hover{
     /* border: 2px solid; */
-    background-color: var(--main-black);
-    color: #FFFFFF;
+    /* background-color: var(--main-black); */
+    /* color: #FFFFFF; */
+    transform: scale(1.1);
 }
 
 
@@ -224,7 +232,8 @@ a{
 }
 .sticky_industry:hover{
     text-decoration: underline;
-    text-decoration-thickness: 0.8px;
+    text-decoration-color: var(--main-green);
+    text-decoration-thickness: 3px;
 }
 
 /* key projects */
@@ -240,10 +249,10 @@ a{
     display: flex;
     flex-direction: column;
     gap: 150px 0;
+    padding: 0 0 80px;
 }
 .key_project{
     display: flex;
-    align-items: flex-end;
     gap: 0 38px;
 }
 .key_project_left{
@@ -253,17 +262,6 @@ a{
     max-width: 800px;
     border-radius: var(--border-radius);
 }
-.mini_photos{
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 0 12px;
-}
-.mini_photo{
-    width: 190px;
-    max-width: 100%;
-    border-radius: var(--border-radius);
-}
 .key_project_name{
     position: relative;
     font-size: 24px;
@@ -271,6 +269,11 @@ a{
     text-transform: uppercase;
     text-decoration: underline;
     text-decoration-thickness: 2px;
+}
+.kp_status{
+    font-weight: 600;
+    color: var(--main-green);
+    /* text-decoration: underline; */
 }
 .ongoing_project{
     position: absolute;
@@ -329,59 +332,6 @@ a{
 }
 .v2_key_points .key_point{
     flex-basis: 50%;
-}
-
-/* clients *********************************************/
-.clients{
-    padding: 50px 0;
-}
-.client_head{
-    font-size: 50px;
-    margin: 0 0 40px;
-    /* text-decoration: underline;
-    text-decoration-style: dotted; */
-    text-align: center;
-}
-.clients_wrap{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-/* call cta popup ****************************************/
-.call_cta_popup{
-    position: fixed;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.7);
-}
-.active_flex{
-    display: flex;
-}
-.call_cta_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-    height: 300px;
-    padding: 20px;
-    margin: 0 auto;
-    transition: 0.3s all;
-    animation: zoom_out 0.3s linear;
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-.call_cta_text{
-    font-size: 44px;
-    text-align: center;
-    pointer-events: none;
 }
 
 /* category heads *********************************************/
@@ -453,12 +403,12 @@ a{
     cursor: pointer;
     text-transform: capitalize;
 }
-p.industry_tab:nth-last-child(1){
-    border: none;
-}
 .industry_tab:hover{
     color: #FFFFFF;
-    background-color: var(--main-black);
+    background-color: var(--main-green);
+}
+p.industry_tab:nth-last-child(1){
+    border: none;
 }
 .project_cards_wrap{
     display: none;
@@ -554,7 +504,7 @@ p.industry_tab:nth-last-child(1){
 }
 .industry_nav_btn:hover{
     color: #FFFFFF;
-    background-color: var(--main-black);
+    background-color: var(--main-green);
 }
 .industry_nav_arr, .industry_nav_arr_back{
     font-size: 22px;
@@ -587,6 +537,9 @@ p.industry_tab:nth-last-child(1){
 }
 .about_main_head{
     font-size: 28px;
+    text-decoration: underline;
+    text-decoration-color: var(--main-green);
+    text-decoration-thickness: 3px;
 }
 .about_text{
     font-size: 20px;
@@ -596,7 +549,6 @@ p.industry_tab:nth-last-child(1){
 }
 .team_cards, .associates_wrap{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 .team_cards{
@@ -655,6 +607,11 @@ p.industry_tab:nth-last-child(1){
 }
 .associates_head{
     text-decoration: underline;
+    text-decoration-color: var(--main-green);
+    text-decoration-thickness: 3px;
+}
+.associates_wrap{
+    justify-content: space-between;
 }
 .associate_name{
     font-size: 20px;
@@ -737,6 +694,17 @@ footer{
 }
 .company_details{
     color: #FFFFFF;
+}
+.developer, .developer_link{
+    color: #fff;
+}
+.developer_link{
+    padding: 0 5px;
+    text-decoration: underline var(--main-green) 1.5px;
+}
+.developer_link:hover{
+    color: #fff;
+    background: var(--main-green);
 }
 
 /* mobile menu */
