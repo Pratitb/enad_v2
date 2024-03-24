@@ -8,6 +8,8 @@ const navLinks = document.querySelectorAll('.nav_links')
 const headerIndustries = document.querySelector('.nav_industries')
 
 // category container
+const industriesLink = document.querySelector('.internal_industries')
+const industriesLinks = document.querySelector('.industries_links')
 const categoryName = document.querySelector('.category_name')
 const industryTab = document.querySelectorAll('.industry_tab')
 const projectsWrap = document.querySelectorAll('.project_cards_wrap')
@@ -32,6 +34,8 @@ mobMenuLink.forEach(menuLink => {
         changeIcon()
     })
 });
+industriesLink.addEventListener('mouseover', showindustriesMenu)
+industriesLink.addEventListener('mouseout', hideindustriesMenu)
 
 // project cards
 projectCards.forEach(projectCard => {
@@ -44,6 +48,12 @@ industryTab.forEach((indusTab) => {
 })
 
 // FUNCTIONS ***********************************************************
+function showindustriesMenu(){
+    industriesLinks.classList.add('show_industry_links')
+}
+function hideindustriesMenu(){
+    industriesLinks.classList.remove('show_industry_links')
+}
 function openCloseMenu(){
     if(!(mobMenu.classList.contains('mob_menu_active'))){
         mobMenu.classList.add('mob_menu_active')
