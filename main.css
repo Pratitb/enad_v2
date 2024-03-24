@@ -424,6 +424,26 @@ a{
 p.industry_tab:nth-last-child(1){
     border: none;
 }
+.scroll_industry_tabs{
+    position: fixed;
+    top: 70px;
+    z-index: 3;
+    width: 100%;
+    padding: 8px 10px;
+    display: none;
+    justify-content: center;
+    gap: 0 10px;
+    background: var(--main-black);
+}
+.scroll_industry_tab{
+    text-transform: capitalize;
+    cursor: pointer;
+    color: #fff;
+    padding: 3px 10px;
+}
+.scroll_industry_tab:hover{
+    background-color: var(--main-green);
+}
 .project_cards_wrap{
     display: none;
     flex-wrap: wrap;

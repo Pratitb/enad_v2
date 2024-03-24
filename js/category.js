@@ -10,6 +10,8 @@ const headerIndustries = document.querySelector('.nav_industries')
 // category container
 const industriesLink = document.querySelector('.internal_industries')
 const industriesLinks = document.querySelector('.industries_links')
+const scrollIndustryTabs = document.querySelector('.scroll_industry_tabs')
+const scrollIndustryTab = document.querySelectorAll('.scroll_industry_tab')
 const categoryName = document.querySelector('.category_name')
 const industryTab = document.querySelectorAll('.industry_tab')
 const projectsWrap = document.querySelectorAll('.project_cards_wrap')
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
     animateCategoryHeads(categoryName, 1500)
     projectCardScale()
 })
+document.addEventListener('scroll', showIndustryTabs)
 mobMenuBtn.addEventListener('click', function(){
     openCloseMenu()
     changeIcon()
@@ -44,7 +47,15 @@ projectCards.forEach(projectCard => {
     })
 });
 industryTab.forEach((indusTab) => {
-    indusTab.addEventListener('click', changeProjects)
+    indusTab.addEventListener('click', function(tabElement){
+        changeProjects(tabElement, industryTab, scrollIndustryTab)
+    })
+})
+scrollIndustryTab.forEach((scrollIndusTab) => {
+    scrollIndusTab.addEventListener('click', function(tabElement){
+        changeProjects(tabElement, scrollIndustryTab, industryTab)
+        scrollPageTop()
+    })
 })
 
 // FUNCTIONS ***********************************************************
@@ -123,18 +134,23 @@ function activateProjectCard(cardClicked){
         }, 9000);
 
 }
-function changeProjects(tabElement){
-    industryTab.forEach((industryTab2) => {
+function changeProjects(tabElement, industryTabArr, industryTabArr2){
+    industryTabArr.forEach((industryTab2) => {
         industryTab2.classList.remove('industryTabActive')
-        findClickedTab(tabElement)
     })
+    industryTabArr2.forEach((industryTab3) => {
+        industryTab3.classList.remove('industryTabActive')
+    })
+    findClickedTab(tabElement)
 }
 function findClickedTab(tabElement){
     let clickedTab = tabElement.currentTarget
-        clickedTab.classList.add('industryTabActive')
-
     let clickedTabName = clickedTab.dataset.name
-        // console.log(clickedTabName);
+    let allMatchTabs = document.querySelectorAll(`p[data-name="${clickedTabName}"]`)
+    allMatchTabs.forEach(matchTab => {
+        matchTab.classList.add('industryTabActive')
+    });
+
         showClickedTabProjects(clickedTabName)
 }
 function showClickedTabProjects(clickedTabName){
@@ -150,5 +166,19 @@ function showClickedTabProjects(clickedTabName){
         else{
             project.classList.remove('project_wrap_active')
         }
+    })
+}
+function showIndustryTabs(){
+    if(scrollY > 40){
+        scrollIndustryTabs.classList.add('show_industry_links')
+    }
+    else{
+        scrollIndustryTabs.classList.remove('show_industry_links')
+    }
+}
+function scrollPageTop(){
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: 'smooth',
     })
 }
