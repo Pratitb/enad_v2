@@ -4,7 +4,8 @@ const mobMenu = document.querySelector('.mobile_menu')
 const menuOpenIcon = document.querySelector('.menu_open_icon')
 const menuCloseIcon = document.querySelector('.menu_close_icon')
 const mobMenuLink = document.querySelectorAll('.mob_menu_link')
-
+const industriesLink = document.querySelector('.internal_industries')
+const industriesLinks = document.querySelector('.industries_links')
 const categoryName = document.querySelector('.category_name')
 
 // event listeners
@@ -22,6 +23,8 @@ mobMenuLink.forEach(menuLink => {
         changeIcon()
     })
 });
+industriesLink.addEventListener('mouseover', showindustriesMenu)
+industriesLink.addEventListener('mouseout', hideindustriesMenu)
 
 // functions
 function animateCategoryHeads(head, delay){
@@ -70,4 +73,11 @@ function changeIcon(){
 }
 function pageScrolling(scrollVal){
     document.documentElement.style.overflowY = scrollVal;
+}
+// navigation
+function showindustriesMenu(){
+    industriesLinks.classList.add('show_industry_links')
+}
+function hideindustriesMenu(){
+    industriesLinks.classList.remove('show_industry_links')
 }
