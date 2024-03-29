@@ -1029,6 +1029,14 @@ footer{
     .project_cards_wrap{
         gap: 20px;
     }
+    .industry_navigation{
+        flex-direction: column;
+    }
+    .category_name{
+        font-size: 16px;
+        letter-spacing: 5px;
+        text-align: center;
+    }
     /* about */
     .about_main_text_wrap{
         flex-direction: column;
@@ -1048,7 +1056,6 @@ footer{
     .footer_logo_wrap, .footer_info{
         text-align: center;
     }
-    
     .footer_links_head{
         text-align: center;
         margin: 0;
@@ -1110,6 +1117,9 @@ footer{
     .industry_cta_arrow{
         background-color: rgba(255, 255, 255, 1);
     }
+    .scroll_industry_tab{
+        font-size: 14px;
+    }
     /* key projects */
     .key_projects{
         padding: 0;
@@ -1141,10 +1151,11 @@ footer{
         max-width: 170px;
     }
     /* categories */
+    .hospitality_head{
+        font-size: 12px;
+    }
     .industry_tabs{
-        position: fixed;
-        z-index: 1;
-        top: 95px;
+        top: 110px;
         gap: 0;
         padding: 10px 0;
         background-color: #FFFFFF;
@@ -1240,16 +1251,37 @@ footer{
         }
     }
     /* categories */
+    .category_name{
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+    .hospitality_head{
+        font-size: 10px;
+    }
     .industry_tabs{
-        top: 90px;
+        top: 104px;
     }
     .industry_tab{
         text-align: center;
         font-size: 12px;
         padding: 6px 8px;
     }
+    .scroll_industry_tabs{
+        padding: 6px;
+        gap: 0 6px;
+    }
+    .scroll_industry_tab{
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+    .industry_nav_arr, .industry_nav_arr_back{
+        font-size: 20px;
+    }
     .project_wrap_position{
         top: 160px;
+    }
+    .project_cards_wrap{
+        padding: 0 10px 180px;
     }
     .project_card, .project_card_front, .project_card_back, .project_image{
         max-width: 304px;
@@ -1265,6 +1297,10 @@ footer{
     .project_desc{
         font-size: 14px;
     }
+    .industry_nav_btn, .industry_nav_name{
+        font-size: 15px;
+    }
+    /* about */
     .team_card{
         max-width: 160px;
     }
