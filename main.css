@@ -1166,6 +1166,9 @@ footer{
     .project_desc{
         font-size: 16px;
     }
+    .industry_nav_name{
+        text-decoration: underline var(--main-green) 3px;
+    }
     .footer_top{
         font-size: 14px;
     }
