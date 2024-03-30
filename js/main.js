@@ -8,6 +8,10 @@ const mobMenu = document.querySelector('.mobile_menu')
 const menuOpenIcon = document.querySelector('.menu_open_icon')
 const menuCloseIcon = document.querySelector('.menu_close_icon')
 const mobMenuLink = document.querySelectorAll('.mob_menu_link')
+const industryMobLink = document.querySelector('.industries_mob_link')
+// const industriesMobLinkArr = document.querySelector('.more_links')
+const indusMobMenu = document.querySelector('.industries_mobile_menu')
+const indusBackBtn = document.querySelector('.go_back_indus')
 
 // hero section
 const heroSection = document.querySelector('.hero')
@@ -44,6 +48,11 @@ document.addEventListener('scroll', function(){
         stickyIndustries.classList.remove('show_sticky_industries')
     }
 })
+// mobile links
+industryMobLink.addEventListener('click', showIndustryLinks)
+indusBackBtn.addEventListener('click', hideIndusMobLinks)
+
+// desktop header
 keyProjectsNavLink.addEventListener('click', scrollToKeyProjects)
 industriesNavLink.addEventListener('click', scrollToIndustries)
 mobMenuBtn.addEventListener('click', function(){
@@ -81,6 +90,7 @@ function showMenuLinks(){
         mobMenuLink.forEach(menuLink => {
             menuLink.classList.add('show_mob_menu_link')
         });
+        industryMobLink.classList.add('show_mob_menu_link')
     }, 400);
     pageScrolling('hidden')
 }
@@ -88,6 +98,8 @@ function hideMenuAndLinks(){
     mobMenuLink.forEach(menuLink => {
         menuLink.classList.remove('show_mob_menu_link')
     });
+    industryMobLink.classList.remove('show_mob_menu_link')
+    indusMobMenu.classList.remove('show_industry_mob_links')
     setTimeout(() => {
         mobMenu.classList.remove('mob_menu_active')
     }, 600);
@@ -104,6 +116,12 @@ function changeIcon(){
             menuCloseIcon.classList.remove('show_mob_icon')
         }, 1000);
     }
+}
+function showIndustryLinks(){
+    indusMobMenu.classList.add('show_industry_mob_links')
+}
+function hideIndusMobLinks(){
+    indusMobMenu.classList.remove('show_industry_mob_links')
 }
 function pageScrolling(scrollVal){
     document.documentElement.style.overflowY = scrollVal;
