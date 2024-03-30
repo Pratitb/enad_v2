@@ -749,7 +749,7 @@ footer{
 }
 
 /* mobile menu */
-.mobile_menu_btn, .mobile_menu{
+.mobile_menu_btn, .mobile_menu, .industries_mobile_menu{
     display: none;
 }
 
