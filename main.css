@@ -364,7 +364,7 @@ a{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 4;
     background-color: #FFFFFF;
 }
 .category_name_wrap, .project_head_wrap{
@@ -727,7 +727,7 @@ footer{
 .footer_bottom{
     padding: 10px 0 0;
     margin: 20px 0 0;
-    border-top: 1px solid var(--main-green);
+    border-top: 2px solid var(--main-green);
 }
 .copyright_social{
     display: flex;
@@ -1166,7 +1166,8 @@ footer{
         font-size: 35px;
     }
     .key_project_name{
-        font-size: 28px;
+        font-size: 24px;
+        display: inline-block;
     }
     .ongoing_project{
         top: 18px;
@@ -1274,8 +1275,8 @@ footer{
         font-size: 20px;
     }
     .ongoing_project{
-        left: -30px;
-        top: 17px;
+        left: -20px;
+        top: 14px;
     }
     .client_head{
         font-size: 30px;
