@@ -179,6 +179,9 @@ a{
     position: relative;
     overflow: hidden;
     text-align: center;
+    transition: 1.2s all;
+    transform: scale(0);
+    opacity: 0;
     max-width: 270px;
     max-height: 405px;
     line-height: 1;
@@ -258,6 +261,11 @@ a{
 }
 
 /* key projects */
+.key_projects{
+    transition: 1.2s all;
+    transform: scale(0);
+    opacity: 0;
+}
 .key_projects_head{
     text-decoration: underline;
     text-decoration-thickness: 2px;

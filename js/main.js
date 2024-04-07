@@ -20,6 +20,7 @@ const heroCta = document.querySelector('.hero_cta')
 
 // industries section
 const industriesSection = document.querySelector('.industries')
+const industriesCard = document.querySelectorAll('.industry_card')
 const stickyIndustries = document.querySelector('.sticky_industries')
 
 // key projects
@@ -129,10 +130,16 @@ function pageScrolling(scrollVal){
 
 // atf
 function animateHero(){
-    // heroSection.classList.add('activeSection')
+    heroSection.classList.add('activeSection')
     setTimeout(() => {
         heroContent.classList.add('text_active')
-    }, 300);
+    }, 1700);
+    setTimeout(() => {
+        industriesCard.forEach(industryCard =>{
+            industryCard.classList.add('scale_project_cards')
+        })
+        keyProjectsSection.classList.add('scale_project_cards')
+    }, 2000);
 }
 function scrollToKeyProjects(){
     keyProjectsSection.scrollIntoView()
